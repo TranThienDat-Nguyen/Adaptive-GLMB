@@ -20,7 +20,7 @@ A pre-print version is available at https://arxiv.org/abs/2008.00413
   &nbsp;&nbsp;&nbsp;&nbsp;volume={192},\
   &nbsp;&nbsp;&nbsp;&nbsp;pages={108368}}
 # Instructions
-Run the file 'demo.m' to run the simulation. In that file:\
+Run the file 'demo.m' to run the simulation. In that file:
 - Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' \
 - Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2' \
 - Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1' \
