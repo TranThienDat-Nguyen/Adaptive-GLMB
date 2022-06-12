@@ -20,7 +20,7 @@ Use the file 'demo.m' to run the demonstrations. In that file:
 - Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' 
 - Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2' 
 - Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1' 
-- Line 70 runs demonstration with non-linear Gaussian models and filter implementation 'v2' \
+- Line 70 runs demonstration with non-linear Gaussian models and filter implementation 'v2' 
 
 You can choose to use either the standard estimator or partial smooth estimator proposed in [2] by setting the parameter 'filter.estimator_type' in files 'gms/run_filter_v1.m', 'gms/run_filter_v2.m', 'ukf/run_filter_v1.m' and 'ukf/run_filter_v2.m'. Partial smooth estimator is used as default.
 # Performance Notes
