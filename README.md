@@ -18,7 +18,9 @@ A pre-print version is available at https://arxiv.org/abs/2008.00413
   &nbsp;&nbsp;&nbsp;&nbsp;title={Robust multi-sensor generalized labeled multi-Bernoulli filter}, \
   &nbsp;&nbsp;&nbsp;&nbsp;year={2022},\
   &nbsp;&nbsp;&nbsp;&nbsp;volume={192},\
-  &nbsp;&nbsp;&nbsp;&nbsp;pages={108368}}
+  &nbsp;&nbsp;&nbsp;&nbsp;pages={108368}}\
+Schematic of the 'v2' filter
+![alt text](https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.jpg?raw=true)
 # Run Instructions
 Use the file 'demo.m' to run the demonstrations. In that file:
 - Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' 
