@@ -30,7 +30,7 @@ The algorithms occasionally overestimate the cardinality due to the nature of th
 # Acknowledgment
 This implementation is based on MATLAB RFS tracking toolbox provided by Prof. Ba-Tuong Vo at http://ba-tuong.vo-au.com/codes.html.
 # References
-[1] C.-T Do, T.T.D. Nguyen, and H.V. Nguyen. 2022. "Robust multi-sensor generalized labeled multi-Bernoulli filter" Signal Processing 192, pp. 108368. \
+[1] C.-T. Do, T.T.D. Nguyen, and H.V. Nguyen. 2022. "Robust multi-sensor generalized labeled multi-Bernoulli filter" Signal Processing 192, pp. 108368. \
 https://www.sciencedirect.com/science/article/pii/S0165168421004059 \
 [2] T.T.D. Nguyen, and D.Y. Kim. 2019. "GLMB Tracker with Partial Smoothing" Sensors 19, pp. 4419.\
 https://www.mdpi.com/1424-8220/19/20/4419
