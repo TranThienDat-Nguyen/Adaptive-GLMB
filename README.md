@@ -1,12 +1,14 @@
 # Multi-Object Tracking with an Adaptive GLMB Filter
 This is an implementation of the adaptive GLMB filter proposed in:\
-@ARTICLE{adaptive_GLMB, \
-  &nbsp;&nbsp;&nbsp;&nbsp;author={Do, Cong-Thanh and Nguyen, Tran Thien Dat and Moratuwage, Diluka and Shim, Changbeom and Chung, Yon Dohn}, \
-  &nbsp;&nbsp;&nbsp;&nbsp;journal={Signal Processing},  \
-  &nbsp;&nbsp;&nbsp;&nbsp;title={Multi-object tracking with an adaptive generalized labeled multi-Bernoulli filter}, \
-  &nbsp;&nbsp;&nbsp;&nbsp;year={2022},\
-  &nbsp;&nbsp;&nbsp;&nbsp;volume={196},\
-  &nbsp;&nbsp;&nbsp;&nbsp;pages={108532}}\
+```
+@ARTICLE{adaptive_GLMB, 
+  author={Do, Cong-Thanh and Nguyen, Tran Thien Dat and Moratuwage, Diluka and Shim, Changbeom and Chung, Yon Dohn}, 
+  journal={Signal Processing}, 
+  title={Multi-object tracking with an adaptive generalized labeled multi-Bernoulli filter}, 
+  year={2022},
+  volume={196},
+  pages={108532}}
+```
 The paper is available at https://www.sciencedirect.com/science/article/abs/pii/S0165168422000792 \
 A pre-print version is available at https://arxiv.org/abs/2008.00413
 # Implementation Notes
