@@ -19,10 +19,9 @@ A pre-print version is available at https://arxiv.org/abs/2008.00413
   &nbsp;&nbsp;&nbsp;&nbsp;year={2022},\
   &nbsp;&nbsp;&nbsp;&nbsp;volume={192},\
   &nbsp;&nbsp;&nbsp;&nbsp;pages={108368}}\
-Schematic of the 'v2' filter
-<img src="[https://your-image-url.type](https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.png)" width="100" height="100">
-<img src="https://github.com/favicon.ico](https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.png?raw=true)" width="48">
-![alt text](https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.png?raw=true)
+   \
+Schematic of the 'v2' filter \
+<img src="https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.png" width="600" height="272">
 # Run Instructions
 Use the file 'demo.m' to run the demonstrations. In that file:
 - Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' 
