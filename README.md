@@ -9,7 +9,7 @@ This is an implementation of the adaptive GLMB filter proposed in:\
   &nbsp;&nbsp;&nbsp;&nbsp;pages={108532}}\
 The paper is available at https://www.sciencedirect.com/science/article/abs/pii/S0165168422000792 \
 A pre-print version is available at https://arxiv.org/abs/2008.00413
-# Implementation notes
+# Implementation Notes
 'v1' is the original filter proposed in the paper. \
 'v2' is based on the filtering algorithm proposed in the following paper: \
 @ARTICLE{robust_MSGLMB, \
@@ -25,7 +25,7 @@ Run the file 'demo.m' to run the simulation. In that file:
 - Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2' 
 - Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1' 
 - Line 70 runs demonstration with non-linear Gaussian models and filter implementation 'v2' 
-# Performance notes
+# Performance Notes
 The algorithms occasionally overestimate the cardinality due to the nature of the measurement-driven birth model.
 # Acknowledgments
 This implementation is based on MATLAB RFS tracking toolbox provided by Prof. Ba-Tuong Vo at http://ba-tuong.vo-au.com/codes.html.
