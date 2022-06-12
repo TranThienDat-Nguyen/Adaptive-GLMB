@@ -64,7 +64,7 @@ clear all ;
 dbstop if error ;
 warning('off','all') ;
 %% Run demonstrations
-demo_gms_v1 % linear dynamic scenario version 1 (uncomment this line to run)
-demo_gms_v2 % linear dynamic scenario version 2 (uncomment this line to run)
-demo_ukf_v1 % non-linear dynamic scenario version 1 (uncomment this line to run)
-demo_ukf_v2 % non-linear dynamic scenario version 2 (uncomment this line to run)
+demo_gms_v1 % linear dynamic scenario version 1
+demo_gms_v2 % linear dynamic scenario version 2
+demo_ukf_v1 % non-linear dynamic scenario version 1
+demo_ukf_v2 % non-linear dynamic scenario version 2
