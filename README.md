@@ -10,7 +10,7 @@ This is an implementation of the adaptive GLMB filter proposed in:\
 The paper is available at https://www.sciencedirect.com/science/article/abs/pii/S0165168422000792 \
 A pre-print version is available at https://arxiv.org/abs/2008.00413
 # Implementation notes
-'v1' is the original version proposed in the paper. \
+'v1' is the original filter proposed in the paper. \
 'v2' is based on the filtering algorithm proposed in the following paper: \
 @ARTICLE{robust_MSGLMB, \
   &nbsp;&nbsp;&nbsp;&nbsp;author={Do, Cong-Thanh and Nguyen, Tran Thien Dat and Nguyen, Hoa Van}, \
@@ -21,10 +21,10 @@ A pre-print version is available at https://arxiv.org/abs/2008.00413
   &nbsp;&nbsp;&nbsp;&nbsp;pages={108368}}
 # Instructions
 Run the file 'demo.m' to run the simulation. In that file:\
-&nbsp;&nbsp;&nbsp;Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' \
-&nbsp;&nbsp;&nbsp;Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2' \
-&nbsp;&nbsp;&nbsp;Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1' \
-&nbsp;&nbsp;&nbsp;Line 70 runs demonstration with non-linear Gaussian models and filter implementation 'v2' 
+- Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' \
+- Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2' \
+- Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1' \
+- Line 70 runs demonstration with non-linear Gaussian models and filter implementation 'v2' 
 # Performance notes
 The algorithms occasionally overestimate the cardinality due to the nature of the measurement-driven birth model.
 # Acknowledgments
