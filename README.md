@@ -25,7 +25,7 @@ Use the file 'demo.m' to run the demonstrations. In that file:
 You can choose to use either the standard estimator or partial smooth estimator proposed in [2] by setting the parameter 'filter.estimator_type' in files 'gms/run_filter_v1.m', 'gms/run_filter_v2.m', 'ukf/run_filter_v1.m' and 'ukf/run_filter_v2.m'. Partial smooth estimator is used as default.
 # Performance Notes
 The algorithms occasionally overestimate the cardinality due to the nature of the measurement-driven birth model.
-# Acknowledgments
+# Acknowledgment
 This implementation is based on MATLAB RFS tracking toolbox provided by Prof. Ba-Tuong Vo at http://ba-tuong.vo-au.com/codes.html.
 # References
 [1] C.-T Do, T.T.D. Nguyen, and H.V. Nguyen. 2022. "Robust multi-sensor generalized labeled multi-Bernoulli filter" Signal Processing 192, pp. 108368. \
