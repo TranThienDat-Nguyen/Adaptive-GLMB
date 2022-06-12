@@ -1,4 +1,4 @@
-# Multi-object tracking with an adaptive GLMB filter
+# Multi-Object Tracking with an Adaptive GLMB Filter
 This is an implementation of the adaptive GLMB filter proposed in:\
 @ARTICLE{adaptive_GLMB, \
   &nbsp;&nbsp;&nbsp;&nbsp;author={Do, Cong-Thanh and Nguyen, Tran Thien Dat and Moratuwage, Diluka and Shim, Changbeom and Chung, Yon Dohn}, \
