@@ -14,7 +14,7 @@ A pre-print version is available at https://arxiv.org/abs/2008.00413
 'v2' is based on the filtering algorithm proposed in [1] \
 Schematic of the 'v2' filter \
 <img src="https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.png" width="600" height="272"> \
-In 'v2' implementation, the detection probability for each track is processed the GLMB filter.
+In 'v2' implementation, the detection probability for each track is processed by GLMB filter.
 # Run Instructions
 Use the file 'demo.m' to run the demonstrations. In that file:
 - Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' 
