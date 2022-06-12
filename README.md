@@ -1,5 +1,5 @@
 # Multi-object tracking with an adaptive GLMB filter
-This is an implementation of the partial smoother for GLMB filter proposed in:\
+This is an implementation of the adaptive GLMB filter proposed in:\
 @ARTICLE{adaptive_GLMB, \
   &nbsp;&nbsp;&nbsp;&nbsp;author={Do, Cong-Thanh and Nguyen, Tran Thien Dat and Moratuwage, Diluka and Shim, Changbeom and Chung, Yon Dohn}, \
   &nbsp;&nbsp;&nbsp;&nbsp;journal={Signal Processing},  \
