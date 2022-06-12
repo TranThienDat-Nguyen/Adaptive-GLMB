@@ -7,7 +7,7 @@ This is an implementation of the adaptive GLMB filter proposed in:\
   &nbsp;&nbsp;&nbsp;&nbsp;year={2022},\
   &nbsp;&nbsp;&nbsp;&nbsp;volume={196},\
   &nbsp;&nbsp;&nbsp;&nbsp;pages={108532}}\
-The paper is available at https://www.sciencedirect.com/science/article/pii/S0165168422000792 \
+The paper is available at https://www.sciencedirect.com/science/article/abs/pii/S0165168422000792 \
 A pre-print version is available at https://arxiv.org/abs/2008.00413
 # Instructions
 Run demo.m to run the simulation.\
