@@ -199,8 +199,8 @@ for tabidx= 1:length(glmb_predict.tt)
         % Note: the order in qz_update, m_update, P_update is [birth; survive]
         qz_temp =qz_update(tabidx, emm) ; 
         w_temp= qz_temp.*glmb_predict.tt{tabidx}.w+eps;                                                                                 %unnormalized updated weights
-        tt_update{stoidx}.m= m_update(: , tabidx, emm);                                                                                                    %means of Gaussians for updated track
-        tt_update{stoidx}.P= P_update(:, :, tabidx, emm);                                                                                                    %covs of Gaussians for updated track
+        tt_update{stoidx}.m= m_update(: , tabidx, emm);                                                                                 %means of Gaussians for updated track
+        tt_update{stoidx}.P= P_update(:, :, tabidx, emm);                                                                               %covs of Gaussians for updated track
         tt_update{stoidx}.w= w_temp/sum(w_temp);                                                                                        %weights of Gaussians for updated track
         tt_update{stoidx}.l = glmb_predict.tt{tabidx}.l;                                                                                %track label
         tt_update{stoidx}.ah= [glmb_predict.tt{tabidx}.ah; emm];                                                                        %track association history (updated with new measurement)
