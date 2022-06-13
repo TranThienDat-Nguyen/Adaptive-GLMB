@@ -125,7 +125,7 @@ function [meas_ru_w , glmb_nextupdate] = jointpredictupdate(glmb_update,tt_birth
 %create surviving tracks - via time prediction (single target CK)
 tt_survive= cell(length(glmb_update.tt),1);                                                                                 %initialize cell array
 for tabsidx=1:length(glmb_update.tt)
-    [mtemp_predict,Ptemp_predict]= ukf_predict_multiple(model,glmb_update.tt{tabsidx}.m,glmb_update.tt{tabsidx}.P,filter.ukf_alpha,filter.ukf_kappa,filter.ukf_beta);     %kalman prediction for GM
+    [mtemp_predict,Ptemp_predict]= ukf_predict_multiple(model,glmb_update.tt{tabsidx}.m,glmb_update.tt{tabsidx}.P,filter.ukf_alpha,filter.ukf_kappa,filter.ukf_beta);     %kalman prediction
     tt_survive{tabsidx}.m= mtemp_predict;                                                                                   %means of Gaussians for surviving track
     tt_survive{tabsidx}.P= Ptemp_predict;                                                                                   %covs of Gaussians for surviving track
     tt_survive{tabsidx}.w= glmb_update.tt{tabsidx}.w;                                                                       %weights of Gaussians for surviving track
