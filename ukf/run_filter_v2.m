@@ -137,9 +137,9 @@ tt_survive= cell(length(glmb_update.tt),1);                                     
 for tabsidx=1:length(glmb_update.tt)
     tt_survive{tabsidx} = glmb_update.tt{tabsidx} ; 
     % predict kinematic state
-    [mtemp_predict,Ptemp_predict]= ukf_predict_multiple(model,glmb_update.tt{tabsidx}.m,glmb_update.tt{tabsidx}.P,filter.ukf_alpha,filter.ukf_kappa,filter.ukf_beta);      %kalman prediction for GM
+    [mtemp_predict,Ptemp_predict]= ukf_predict_multiple(model,glmb_update.tt{tabsidx}.m,glmb_update.tt{tabsidx}.P,filter.ukf_alpha,filter.ukf_kappa,filter.ukf_beta);      %kalman prediction
     tt_survive{tabsidx}.m= mtemp_predict;                                                                                   %means of Gaussians for surviving track
-    tt_survive{tabsidx}.P= Ptemp_predict;                                                                                   %covs of Gaussians for surviving track                                                                    %track association history (no change at prediction)
+    tt_survive{tabsidx}.P= Ptemp_predict;                                                                                   %covs of Gaussians for surviving track 
     % predict bete parameters
     ss = tt_survive{tabsidx}.st(1) ; 
     tt = tt_survive{tabsidx}.st(2) ; 
@@ -203,8 +203,8 @@ for tabidx= 1:length(glmb_predict.tt)
         % Note: the order in qz_update, m_update, P_update is [birth; survive]
         qz_temp =qz_update(tabidx, emm) ; 
         w_temp= qz_temp.*glmb_predict.tt{tabidx}.w+eps;                                                                                 %unnormalized updated weights
-        tt_update{stoidx}.m= m_update(: , tabidx, emm);                                                                                                    %means of Gaussians for updated track
-        tt_update{stoidx}.P= P_update(:, :, tabidx, emm);                                                                                                    %covs of Gaussians for updated track
+        tt_update{stoidx}.m= m_update(: , tabidx, emm);                                                                                 %means of Gaussians for updated track
+        tt_update{stoidx}.P= P_update(:, :, tabidx, emm);                                                                               %covs of Gaussians for updated track
         tt_update{stoidx}.w= w_temp/sum(w_temp);                                                                                        %weights of Gaussians for updated track
         tt_update{stoidx}.l = glmb_predict.tt{tabidx}.l;                                                                                %track label
         tt_update{stoidx}.ah= [glmb_predict.tt{tabidx}.ah; emm];                                                                        %track association history (updated with new measurement)
@@ -257,18 +257,18 @@ for pidx=1:length(glmb_update.w)
         meas_ru = [meas_ru , meas_ru_temp] ; 
         update_hypcmp_idx= cpreds.*update_hypcmp_tmp+[(1:nbirths)'; nbirths+glmb_update.I{pidx}];
         glmb_nextupdate.w(runidx)= -N_c+m*log(N_c*model.pdf_c)+log(glmb_update.w(pidx))-nlcost(hidx);                                             %hypothesis/component weight
-        glmb_nextupdate.I{runidx}= update_hypcmp_idx(update_hypcmp_idx>0);                                                                                              %hypothesis/component tracks (via indices to track table)
-        glmb_nextupdate.n(runidx)= sum(update_hypcmp_idx>0);                                                                                                            %hypothesis/component cardinality
+        glmb_nextupdate.I{runidx}= update_hypcmp_idx(update_hypcmp_idx>0);                                                                        %hypothesis/component tracks (via indices to track table)
+        glmb_nextupdate.n(runidx)= sum(update_hypcmp_idx>0);                                                                                      %hypothesis/component cardinality
         glmb_nextupdate.clutter(runidx) = m-sum(update_hypcmp_tmp>0) ; 
         runidx= runidx+1;
     end
 end
 
-glmb_nextupdate.w= exp(glmb_nextupdate.w-logsumexp(glmb_nextupdate.w));                                                                                                                 %normalize weights
+glmb_nextupdate.w= exp(glmb_nextupdate.w-logsumexp(glmb_nextupdate.w));                                                                           %normalize weights
 meas_ru_w = meas_ru * glmb_nextupdate.w' ; 
 %extract cardinality distribution
 for card=0:max(glmb_nextupdate.n)
-    glmb_nextupdate.cdn(card+1)= sum(glmb_nextupdate.w(glmb_nextupdate.n==card));                                                                                                       %extract probability of n targets
+    glmb_nextupdate.cdn(card+1)= sum(glmb_nextupdate.w(glmb_nextupdate.n==card));                                                                 %extract probability of n targets
 end
 
 %remove duplicate entries and clean track table
