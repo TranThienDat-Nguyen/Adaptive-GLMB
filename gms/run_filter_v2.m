@@ -252,19 +252,19 @@ for pidx=1:length(glmb_update.w)
         meas_ru_temp(update_hypcmp_tmp(update_hypcmp_tmp>0)) = true ; 
         meas_ru = [meas_ru , meas_ru_temp] ; 
         update_hypcmp_idx= cpreds.*update_hypcmp_tmp+[(1:nbirths)'; nbirths+glmb_update.I{pidx}];
-        glmb_nextupdate.w(runidx)= -N_c+m*log(N_c*model.pdf_c)+log(glmb_update.w(pidx))-nlcost(hidx);                                             %hypothesis/component weight
-        glmb_nextupdate.I{runidx}= update_hypcmp_idx(update_hypcmp_idx>0);                                                                                              %hypothesis/component tracks (via indices to track table)
-        glmb_nextupdate.n(runidx)= sum(update_hypcmp_idx>0);                                                                                                            %hypothesis/component cardinality
+        glmb_nextupdate.w(runidx)= -N_c+m*log(N_c*model.pdf_c)+log(glmb_update.w(pidx))-nlcost(hidx);                                   %hypothesis/component weight
+        glmb_nextupdate.I{runidx}= update_hypcmp_idx(update_hypcmp_idx>0);                                                              %hypothesis/component tracks (via indices to track table)
+        glmb_nextupdate.n(runidx)= sum(update_hypcmp_idx>0);                                                                            %hypothesis/component cardinality
         glmb_nextupdate.clutter(runidx) = m-sum(update_hypcmp_tmp>0) ; 
         runidx= runidx+1;
     end
 end
 
-glmb_nextupdate.w= exp(glmb_nextupdate.w-logsumexp(glmb_nextupdate.w));                                                                                                                 %normalize weights
+glmb_nextupdate.w= exp(glmb_nextupdate.w-logsumexp(glmb_nextupdate.w));                                                                 %normalize weights
 meas_ru_w = meas_ru * glmb_nextupdate.w' ; 
 %extract cardinality distribution
 for card=0:max(glmb_nextupdate.n)
-    glmb_nextupdate.cdn(card+1)= sum(glmb_nextupdate.w(glmb_nextupdate.n==card));                                                                                                       %extract probability of n targets
+    glmb_nextupdate.cdn(card+1)= sum(glmb_nextupdate.w(glmb_nextupdate.n==card));                                                       %extract probability of n targets
 end
 
 %remove duplicate entries and clean track table
