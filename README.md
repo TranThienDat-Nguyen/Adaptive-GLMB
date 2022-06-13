@@ -18,7 +18,7 @@ Schematic of the 'v2' filter \
 <img src="https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.png" width="600" height="272"> \
 In 'v2' implementation, the detection probability for each track is processed by GLMB filter.
 # Run Instructions
-Use the file 'demo.m' to run the demonstrations. In that file:
+Use the file 'demo.m' to run the demonstrations. In this file:
 - Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1'. 
 - Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2'. 
 - Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1'. 
