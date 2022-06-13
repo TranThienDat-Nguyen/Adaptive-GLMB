@@ -13,16 +13,16 @@ The paper is available at https://www.sciencedirect.com/science/article/abs/pii/
 A pre-print version is available at https://arxiv.org/abs/2008.00413
 # Implementation Notes
 'v1' is the original filter proposed in the paper. \
-'v2' is based on the filtering algorithm proposed in [1] \
+'v2' is based on the filtering algorithm proposed in [1]. \
 Schematic of the 'v2' filter \
 <img src="https://github.com/TranThienDat-Nguyen/adaptive-GLMB/blob/main/v2_filter_schematic.png" width="600" height="272"> \
 In 'v2' implementation, the detection probability for each track is processed by GLMB filter.
 # Run Instructions
 Use the file 'demo.m' to run the demonstrations. In that file:
-- Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1' 
-- Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2' 
-- Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1' 
-- Line 70 runs demonstration with non-linear Gaussian models and filter implementation 'v2' 
+- Line 67 runs demonstration with linear Gaussian models and filter implementation 'v1'. 
+- Line 68 runs demonstration with linear Gaussian models and filter implementation 'v2'. 
+- Line 69 runs demonstration with non-linear Gaussian models and filter implementation 'v1'. 
+- Line 70 runs demonstration with non-linear Gaussian models and filter implementation 'v2'. 
 
 You can choose to use either the standard estimator or partial smooth estimator proposed in [2] by setting the parameter 'filter.estimator_type' in files 'gms/run_filter_v1.m', 'gms/run_filter_v2.m', 'ukf/run_filter_v1.m' and 'ukf/run_filter_v2.m'. Partial smooth estimator is used by default.
 # Performance Notes
